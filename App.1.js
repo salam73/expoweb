@@ -45,7 +45,7 @@ const FirstActivity_StackNavigator = createStackNavigator({
   First: {
     screen: Screen1,
     navigationOptions: ({ navigation }) => ({
-      title: 'مدرسة كربلاء التقنية',
+      title: 'Home',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#FF9800',
@@ -63,7 +63,7 @@ const Screen2_StackNavigator = createStackNavigator({
   Second: {
     screen: Screen2,
     navigationOptions: ({ navigation }) => ({
-      title: 'الصفوف',
+      title: 'Demo Screen 2',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#FF9800',
@@ -81,7 +81,7 @@ const Screen3_StackNavigator = createStackNavigator({
   Third: {
     screen: Screen3,
     navigationOptions: ({ navigation }) => ({
-      title: 'الطلاب',
+      title: 'Demo Screen 3',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#FF9800',
@@ -100,31 +100,24 @@ const DrawerNavigatorExample = createDrawerNavigator({
     //Title
     screen: FirstActivity_StackNavigator,
     navigationOptions: {
-      drawerLabel: 'المدرسة',
+      drawerLabel: 'Demo Screen 1',
     },
   },
   Screen2: {
     //Title
     screen: Screen2_StackNavigator,
     navigationOptions: {
-      drawerLabel: 'الصفوف',
+      drawerLabel: 'Demo Screen 2',
     },
   },
   Screen3: {
     //Title
     screen: Screen3_StackNavigator,
     navigationOptions: {
-      drawerLabel: 'الطلاب',
+      drawerLabel: 'Demo Screen 3',
     },
   },
- 
-},
-{
-  drawerPosition: 'right',
-}
-
-
-);
+});
  
 //For React Navigation 2.+ need to export App only
 //export default App;
