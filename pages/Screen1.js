@@ -6,39 +6,74 @@ import { createBottomTabNavigator, createAppContainer, createMaterialTopTabNavig
 import Icon from "react-native-vector-icons/FontAwesome";
 
 
-import Home from '../screens/HomeScreen'
-import Profile from '../screens/ProfileScreen'
+import Home from "../component/screens/Home"
+import Teacher from "../component/screens/Search";
+import Explore from "../component/screens/Explore";
+import Noor from "../component/screens/Noor";
 
 
 const TabNavigator = createMaterialTopTabNavigator({
+ 
+  Teacher:  {
+    screen:Teacher,
+    navigationOptions:{
+      tabBarColor: '#27a156',
+      tabBarLabel:"الكادر التدريسي",
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name="users" size={16} color={tintColor} />
+      ),
+      tabBarOptions: {
+        // drawerPosition: 'right',
+         showIcon:true,
+         activeTintColor: '#fff',
+         labelStyle: {
+           fontSize: 14,
+           color:'white'
+         },
+         style: {
+           backgroundColor: '#27a156',
+         },
+         indicatorStyle:{
+           backgroundColor:'#114c28'
+         }
+       }
+    }
+  },
   Home:  {
     screen:Home,
     navigationOptions:{
-      tabBarLabel:"albiuet",
+      tabBarColor: '#9427a1',
+      tabBarLabel:"الادارة",
       tabBarIcon: ({ tintColor }) => (
-        <Icon name="home" size={30} color={tintColor} />
-      )
+        <Icon name="home" size={16} color={tintColor} />
+      ),
+      tabBarOptions: {
+        // drawerPosition: 'right',
+         showIcon:true,
+         activeTintColor: '#fff',
+         labelStyle: {
+           fontSize: 14,
+           color:'white'
+         },
+         style: {
+           backgroundColor: '#9427a1',
+         },
+         indicatorStyle:{
+           backgroundColor:'#631d6b'
+         }
+       }
     }
   },
-  Profile:  {
-    screen:Profile,
-    navigationOptions:{
-      tabBarLabel:"Profile",
-      tabBarIcon: ({ tintColor }) => (
-        <Icon name="search" size={30} color={tintColor} />
-      )
-    }
-  },
-  
 },
 
 
 {
 //tabBarPosition:"bottom",
 
+initialRouteName:'Home'
 
-
-  tabBarOptions: {
+ /*  tabBarOptions: {
+   // drawerPosition: 'right',
     showIcon:true,
     activeTintColor: '#ccaabb',
     labelStyle: {
@@ -51,13 +86,9 @@ const TabNavigator = createMaterialTopTabNavigator({
     indicatorStyle:{
       backgroundColor:'red'
     }
-  }
+  } */
 },
-{
- // drawerPosition: 'right',
-  
 
-}
 
 );
 

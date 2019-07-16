@@ -45,7 +45,7 @@ const FirstActivity_StackNavigator = createStackNavigator({
   First: {
     screen: Screen1,
     navigationOptions: ({ navigation }) => ({
-      title: 'مدرسة كربلاء التقنية',
+      title: 'المدرسة',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
         backgroundColor: '#FF9800',
@@ -66,7 +66,7 @@ const Screen2_StackNavigator = createStackNavigator({
       title: 'الصفوف',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#230FE0',
       },
       headerTintColor: '#fff',
     }),
@@ -84,7 +84,7 @@ const Screen3_StackNavigator = createStackNavigator({
       title: 'الطلاب',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#1D784F',
       },
       headerTintColor: '#fff',
     }),
@@ -117,12 +117,11 @@ const DrawerNavigatorExample = createDrawerNavigator({
       drawerLabel: 'الطلاب',
     },
   },
- 
-},
+}
+,
 {
   drawerPosition: 'right',
 }
-
 
 );
  
