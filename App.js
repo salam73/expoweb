@@ -15,6 +15,7 @@ import {
 import Screen1 from './pages/Screen1';
 import Screen2 from './pages/Screen2';
 import Screen3 from './pages/Screen3';
+import CustomSidebarMenu from './pages/CustomSidebarMenu';
  
 class NavigationDrawerStructure extends Component {
   //Structure for the navigatin Drawer
@@ -121,6 +122,7 @@ const DrawerNavigatorExample = createDrawerNavigator({
 ,
 {
   drawerPosition: 'right',
+  contentComponent: CustomSidebarMenu,
 }
 
 );
