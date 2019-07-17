@@ -17,7 +17,7 @@ const TabNavigator = createMaterialTopTabNavigator({
   Teacher:  {
     screen:Teacher,
     navigationOptions:{
-      tabBarColor: '#27a156',
+    //  tabBarColor: '#27a156',
       tabBarLabel:"الكادر التدريسي",
       
       tabBarIcon: ({ tintColor }) => (
@@ -26,11 +26,11 @@ const TabNavigator = createMaterialTopTabNavigator({
       tabBarOptions: {
         // drawerPosition: 'right',
          showIcon:true,
-         activeTintColor: '#000',
-         
+         activeTintColor: '#fff',
+          inactiveTintColor: '#ccc',
          labelStyle: {
            fontSize: 14,
-          // color:'white'
+             
          },
          style: {
            backgroundColor: '#27a156',
@@ -44,23 +44,25 @@ const TabNavigator = createMaterialTopTabNavigator({
   Home:  {
     screen:Home,
     navigationOptions:{
-      tabBarColor: '#9427a1',
-      tabBarLabel:"الادارة",
       
+      tabBarLabel:"الادارة",
+      tabBarColor:'red',
       tabBarIcon: ({ tintColor }) => (
         <Icon name="home" size={16} color={tintColor} />
       ),
       tabBarOptions: {
         // drawerPosition: 'right',
          showIcon:true,
-         activeTintColor: '#000',
-       
+         activeTintColor: '#fff',
+          inactiveTintColor: '#ccc',
+
          labelStyle: {
            fontSize: 14,
-           //color:'white'
+          // color:'red'
          },
          style: {
            backgroundColor: '#9427a1',
+           
          },
          indicatorStyle:{
            backgroundColor:'#631d6b'

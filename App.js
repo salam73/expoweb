@@ -16,7 +16,8 @@ import Screen1 from './pages/Screen1';
 import Screen2 from './pages/Screen2';
 import Screen3 from './pages/Screen3';
 import CustomSidebarMenu from './pages/CustomSidebarMenu';
- 
+import Icon2 from "react-native-vector-icons/MaterialCommunityIcons";
+
 class NavigationDrawerStructure extends Component {
   //Structure for the navigatin Drawer
   toggleDrawer = () => {
@@ -28,10 +29,11 @@ class NavigationDrawerStructure extends Component {
       <View style={{ flexDirection: 'row' }}>
         <TouchableOpacity onPress={this.toggleDrawer.bind(this)}>
           {/*Donute Button Image */}
-          <Image
+         {/*  <Image
             source={require('./image/drawer.png')}
             style={{ width: 25, height: 25, marginLeft: 5 }}
-          />
+          /> */}
+          <Icon2 name="dots-vertical" size={32} color="white"  />
         </TouchableOpacity>
       </View>
     );
@@ -123,7 +125,9 @@ const DrawerNavigatorExample = createDrawerNavigator({
 {
   drawerPosition: 'right',
   contentComponent: CustomSidebarMenu,
-}
+  
+},
+
 
 );
  
